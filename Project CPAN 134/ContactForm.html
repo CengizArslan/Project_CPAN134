@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title>Contact Page</title>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 5;
+            }
+
+            h2, table{
+                margin: 15;
+            }
+    
+            footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                background-color: #f1f1f1;
+                text-align: center;
+                padding: 20px;
+            }
+
+            form {
+            text-align: left;
+            width: 400px;
+            margin: 15;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: bold;
+            }
+
+            input[type="email"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+            input[type="submit"] {
+                background-color: #28a745;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #218838;
+            }
+
+            .error {
+                color: red;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href ="HomePage.html" target="_blank"><span>Home Page</span></a></li>
+                <li><a href="Bio.html" target="_blank"><span>About Me</span></a></li>
+                <li><a href="Resume.html" target="_blank"><span>My Resume</span></a></li>
+                <li><a href="Projects.html" target="_blank"><span>My Projects</span></a></li>
+                <li><a href="ContactForm.html" target="_blank"><span>Contact Me</a></a></li>
+                <li><a href="projectsInteractive1.html" target="_blank"><span>Project1</span></a></li>
+                <li><a href="projectsInteractive2.html" target="_blank"><span>Project2</span></a></li>
+            </ul>
+        </nav>
+        <h2>
+            Contact Me
+        </h2>
+        <table border="1">
+            <tr>
+                <th>Email</th>
+                <th>Phone</th>
+                <tr>
+                    <th>n01702874@humber.ca</th>
+                    <th>555-555-5555</th>
+                </tr>
+            </tr>
+        </table><br>
+        <form id="emailForm">
+                <label for="email">Enter Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required>
+                <span id="emailError" class="error"></span>
+                <input type="submit" value="Submit">
+        </form>
+        <footer>
+            <p>Connect with me on social media:</p>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/cengiz-arslan-79459b26b/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </footer>
+    </body>
+    <script>
+        const form = document.getElementById('emailForm');
+        const emailInput = document.getElementById('email');
+        const emailError = document.getElementById('emailError');
+
+        form.addEventListener('submit', (event) => {
+            const email = emailInput.value;
+
+            // Basic validation
+            if (!isValidEmail(email)) {
+                event.preventDefault(); // Prevent form submission
+                emailError.textContent = 'Please enter a valid email address.';
+            } else {
+                emailError.textContent = ''; // Clear any previous error messages
+            }
+        });
+
+        emailInput.addEventListener('input', () => {
+            emailError.textContent = ''; // Clear error when user starts typing
+        });
+
+        // Email validation function
+        function isValidEmail(email) {
+            const atIndex = email.indexOf('@');
+            const dotIndex = email.lastIndexOf('.');
+
+            // Conditions for a valid email:
+            // 1. Contains '@' and '.'
+            // 2. '@' is not the first character
+            // 3. '.' is after '@'
+            // 4. At least one character between '@' and '.'
+            // 5. '.' is not the last character
+            return (
+                atIndex > 0 &&
+                dotIndex > atIndex + 1 &&
+                dotIndex < email.length - 1
+            );
+        }
+
+    </script>
+</html>

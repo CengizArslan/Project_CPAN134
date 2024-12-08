@@ -1,0 +1,68 @@
+body {
+    background-image: url('imgs/737718-beautiful-city-of-turkey-mountain-landscape.jpg');
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+}
+
+#header{
+    color:white;
+    background-color: black; /* Black background */
+    padding: 10px; /* Adds space inside the box */
+    border-radius: 3px; /* Adds rounded corners */
+    width: fit-content; /* Adjusts box size to fit the content */
+}
+
+#text1{
+    color:white;
+    background-color: black; /* Black background */
+    padding: 10px; /* Adds space inside the box */
+    border-radius: 3px; /* Adds rounded corners */
+    width: fit-content; /* Adjusts box size to fit the content */
+}
+
+#quote{
+    color:white;
+    background-color: black; /* Black background */
+    padding: 10px; /* Adds space inside the box */
+    border-radius: 3px; /* Adds rounded corners */
+    width: fit-content; /* Adjusts box size to fit the content */
+}
+
+#id2{
+    color:white;
+    background-color: black; /* Black background */
+    padding: 10px; /* Adds space inside the box */
+    border-radius: 3px; /* Adds rounded corners */
+    width: fit-content; /* Adjusts box size to fit the content */
+}
+
+.button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px;
+    text-align: center;
+}
+
+.button:hover{
+    background-color: purple;
+}
+
+#toggleButton{
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#linksContainer{
+    display: none;
+    margin-top: 15px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--makes sure page takes up width of device and puts zoom at 100%-->
+        <title>Recipe Finder</title>
+        <style>
+            body {/* styling for body */
+                font-family: Arial, sans-serif;
+                padding: 20px;
+                max-width: 900px;
+            }
+            .search-bar, .favorites, .recipes {/* styling for search-bar, favourites and recipes */
+                margin-bottom: 20px;
+            }
+            .recipe-card {/* styling for recipe-card */
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+            button {/* styling for buttons */
+                margin-top: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href ="HomePage.html" target="_blank"><span>Home Page</span></a></li>
+                <li><a href="Bio.html" target="_blank"><span>About Me</span></a></li>
+                <li><a href="Resume.html" target="_blank"><span>My Resume</span></a></li>
+                <li><a href="Projects.html" target="_blank"><span>My Projects</span></a></li>
+                <li><a href="ContactForm.html" target="_blank"><span>Contact Me</a></a></li>
+                <li><a href="projectsInteractive1.html" target="_blank"><span>Project1</span></a></li>
+                <li><a href="projectsInteractive2.html" target="_blank"><span>Project2</span></a></li>
+            </ul>
+        </nav>
+        <h1>Recipe Finder</h1>
+        <div class="search-bar"><!--the searchbar-->
+            <input type="text" id="ingredientInput" placeholder="Enter an ingredient">
+            <button id="searchButton">Search Recipes</button><!--search button-->
+        </div>
+        <div class="recipes"><!--classes and ids that are referenced to in the script page-->
+            <h2>Recipes</h2><!--sections of the page-->
+            <div id="recipeList"></div>
+        </div>
+        <div class="favorites">
+            <h2>Favorite Recipes</h2>
+            <div id="favoriteList"></div>
+        </div>
+        <script src="script2.js"></script><!--page where the functional code is-->
+    </body>
+</html>
